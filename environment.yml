@@ -1,15 +1,13 @@
-name: bank-liq-env
+name: anomaly-detection
 channels:
   - conda-forge
-  - defaults
 dependencies:
   - python=3.12
-  - numpy>=2.0.0
-  - pandas>=2.2.0
-  - scipy
-  - matplotlib
-  - jupyterlab
-  - pytest
-  - pip:
-    - yfinance
-    - riskfolio-lib
+  - numpy>=1.26
+  - pandas>=2.2
+  - polars>=0.20
+  - scikit-learn>=1.4
+  - scipy>=1.12
+  - pytest>=8.0
+  - ruff>=0.2
+  - black>=24.0
