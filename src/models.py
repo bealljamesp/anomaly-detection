@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import numpy as np
 import numpy.typing as npt
 from sklearn.ensemble import IsolationForest
@@ -7,8 +9,8 @@ from sklearn.svm import OneClassSVM
 
 
 class ComprehensiveAnomalyEnsemble:
-    """Multi-model anomaly detection engine incorporating Isolation Forest,
-
+    """
+    Multi-model anomaly detection engine incorporating Isolation Forest,
     Local Outlier Factor, and OneClass SVM for institutional financial fraud detection.
     """
 
@@ -43,8 +45,8 @@ class ComprehensiveAnomalyEnsemble:
         return self
 
     def predict(self, x: npt.NDArray[np.float64]) -> dict[str, npt.NDArray[np.int64]]:
-        """Generate binary predictions (-1 for anomaly, 1 for normal) across all models
-
+        """
+        Generate binary predictions (-1 for anomaly, 1 for normal) across all models
         and compute a majority voting consensus.
         """
         x_scaled = self.scaler.transform(x)
